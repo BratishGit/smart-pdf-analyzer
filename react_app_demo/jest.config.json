@@ -1,0 +1,28 @@
+{
+    "testMatch": [
+        "<rootDir>/src/__tests__/**/*.test.js",
+        "<rootDir>/src/__tests__/**/*.test.jsx",
+        "<rootDir>/src/**/*.test.js",
+        "<rootDir>/src/**/*.test.jsx"
+    ],
+    "testEnvironment": "jsdom",
+    "transform": {
+        "^.+\\.(js|jsx|mjs|cjs)$": [
+            "babel-jest",
+            {
+                "presets": [
+                    "react-app"
+                ]
+            }
+        ]
+    },
+    "transformIgnorePatterns": [
+        "node_modules/(?!(react-router|react-router-dom|@remix-run/router)/)"
+    ],
+    "moduleNameMapper": {
+        "\\.(css|less|scss|sass|svg|png|jpg|gif|ttf|eot|woff|woff2)$": "<rootDir>/src/__mocks__/fileMock.js"
+    },
+    "setupFilesAfterFramework": [
+        "<rootDir>/src/setupTests.js"
+    ]
+}
